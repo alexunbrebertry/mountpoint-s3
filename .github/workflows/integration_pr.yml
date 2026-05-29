@@ -14,7 +14,7 @@ jobs:
     - linux
     - x64
     - garalt
-    - garalt-run-1-1-92e3
+    - garalt-run-1-1-216d
 env:
   GARALT_SECRET: ${{ secrets.GARALT }}
 on:
