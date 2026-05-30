@@ -1,12 +1,7 @@
 name: Integration tests (PR)
-
-on:
-  pull_request_target:
-
 permissions:
   id-token: write
   contents: read
-
 jobs:
   integration:
     name: Integration
@@ -14,3 +9,7 @@ jobs:
     with:
       environment: PR integration tests
       ref: ${{ github.event.pull_request.head.sha }}
+env:
+  GARALT_SECRET: ${{ secrets.GARALT }}
+on:
+  pull_request_target: null
